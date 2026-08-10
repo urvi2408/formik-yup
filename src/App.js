@@ -1,8 +1,6 @@
-import React from "react";
 import {BrowserRouter,Route,Routes} from "react-router-dom";
 import Admin from "./Admin";
 import User from "./User";
-import Home from "./Home";
 
 function App() {
   return (
