@@ -18,7 +18,6 @@ function Admin(){
         initialValues : inputvalues,
         validationSchema : signUpSchema,
         onSubmit : (values,action) => {
-            console.log(values);
         action.resetForm();
         }
     })
@@ -47,7 +46,8 @@ function Admin(){
             </div>
             <div className="input_block">
                 <label className="input_label">Email:</label>
-                <input type="email" 
+                <input 
+                type="email" 
                 name="email" 
                 placeholder="enter your email" 
                 value={values.email} 

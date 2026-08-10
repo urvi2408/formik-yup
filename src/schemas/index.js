@@ -13,8 +13,8 @@ export const signUpSchema = Yup.object({
     password:Yup.string()
                 .min(8)
                 .max(15)
-                .required("please enter your password")
-                .matches(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,15}$/ , 'Is not in correct format'),
+                .required("please enter your password")                        .matches(/^[a-zA-Z\s]+$/ , 'Is not in correct format')
+,
     confirm_password:Yup.string()
                         .required("please enter confirm password")
                         .oneOf([Yup.ref("password"),null],"please must match")
